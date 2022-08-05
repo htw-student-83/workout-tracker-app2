@@ -1,24 +1,18 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <i class="far fa-dumbbell"></i><p>Active Tracker</p>
+      <img class="imgNavbar" src="../assets/dumbbell.svg" alt="Logo"><p>Active Tracker</p>
     </div>
     <div class="links">
       <div class="buttonHome">Home</div>
       <div class="buttonLogin">Login</div>
     </div>
   </div>
-  <div class="exercise">
-    <div class="strength">strength</div>
-  </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  }
 }
 </script>
 
@@ -51,30 +45,13 @@ export default {
   margin-right: 40px;
 }
 
-.exercise{
-  width: 200px;
-  height: 250px;
-  background-color: #efefef;
-  margin: 40px 0 0 210px;
-  box-shadow: 0 4px 4px #e3e1e1;
+.logo{
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+  height: 50px;
 }
-
-.strength{
-  width: 80px;
-  margin: 30px;
-  text-align: center;
-  background-color: #67ceb7;
-  padding-bottom: 4px;
-  border-color: #67ceb7;
-  font-weight: bold;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-  color: white;
-  border-radius: 8px;
+.logo .imgNavbar{
+  margin-top: -10px;
 }
-
-.exercise:hover{
-  cursor: pointer;
-}
-
 </style>
