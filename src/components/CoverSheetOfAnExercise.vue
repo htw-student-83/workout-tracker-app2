@@ -1,4 +1,5 @@
 <template>
+  <Navar/>
   <div class="exercise">
     <img class="imgExercise" src="../assets/dumbbell.svg" alt="Logo">
     <div class="strength">
@@ -9,8 +10,14 @@
 </template>
 
 <script>
+
+import Navar from "@/components/Navbar"
+
 export default {
-  name: "ExerciseComponent"
+  name: "CoverSheetOfAnExercise",
+  components:{
+    Navar,
+  }
 }
 </script>
 

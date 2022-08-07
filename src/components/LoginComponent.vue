@@ -1,4 +1,5 @@
 <template>
+  <navbar/>
   <div class="loginbox">
       <label class="TextLogin">Login</label><br>
       <div class="inputeMail">
@@ -15,8 +16,13 @@
 </template>
 
 <script>
+import navbar from "@/components/Navbar";
+
 export default {
-  name: "LoginComponent"
+  name: "LoginComponent",
+  components:{
+    navbar,
+  }
 }
 </script>
 
@@ -24,7 +30,8 @@ export default {
 .loginbox{
   width: 390px;
   height: 250px;
-  margin-left: 460px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
   background-color: #efefef;
   padding: 15px;
