@@ -26,9 +26,8 @@
         <tr>
           <td class="currentExercise">
             <select class="selectType">
-              <option>erer</option>
-              <option>erer</option>
-              <option>erer</option>
+              <option>Run</option>
+              <option>Walk</option>
             </select>
           </td>
           <td class="currentExercise"><input type="text"></td>
@@ -36,6 +35,9 @@
           <td class="currentExercise"><input type="text"></td>
         </tr>
       </table>
+    </div>
+    <div class="AdditionExercise">
+      <p>Add Exercise</p>
     </div>
     <div class="DetailOfNewWorkout">
       <p>Record Workout</p>
@@ -57,10 +59,11 @@ export default {
 <style scoped>
 .CreateNewExercise{
   width: 490px;
-  height: 460px;
+  height: 385px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  margin-bottom: 20px;
   background-color: #efefef;
   padding: 15px;
   box-shadow: 0 4px 4px #e3e1e1;
@@ -70,6 +73,7 @@ export default {
   color: #67ceb7;
   font-family: Arial, sans-serif;
   font-size: 25px;
+  font-weight: bold;
   margin-left: 20px;
 }
 
@@ -85,6 +89,10 @@ tr .topicAtSecond{
   font-size: 14px;
   font-weight: bold;
   font-family: Arial, sans-serif;
+}
+
+.topicAtSecond{
+  padding-left: 20px;
 }
 
 input[type="text"], .typeoptions{
@@ -129,7 +137,8 @@ table{
   height: 35px;
   background-color: #67ceb7;
   text-align: center;
-  margin-top: 300px;
+  margin-top: 50px;
+  margin-left: 20px;
   padding: 10px;
   color: white;
   font-family: Arial, sans-serif;
@@ -138,6 +147,24 @@ table{
 }
 
 .DetailOfNewWorkout:hover{
+  cursor: pointer;
+}
+
+.AdditionExercise{
+  width: 120px;
+  height: 35px;
+  background-color: #67ceb7;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.AdditionExercise:hover{
   cursor: pointer;
 }
 
