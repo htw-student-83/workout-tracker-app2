@@ -1,7 +1,9 @@
 <template>
   <Navar/>
   <div class="exercise">
-    <img class="imgExercise" src="../assets/dumbbell.svg" alt="Logo">
+    <router-link to="/editexercise">
+      <img class="imgExercise" src="../assets/dumbbell.svg" alt="Logo">
+    </router-link>
     <div class="strength">
       <p>strength</p>
     </div>
@@ -17,7 +19,13 @@ export default {
   name: "CoverSheetOfAnExercise",
   components:{
     Navar,
-  }
+  },
+  setup(){
+    //create data/ vars
+    //get data
+    //run data unction
+    return{};
+  },
 }
 </script>
 

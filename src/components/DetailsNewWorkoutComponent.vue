@@ -52,7 +52,15 @@ export default {
   name: "DetailsNewWorkoutComponent",
   components:{
     successfulLogin,
-  }
+  },
+  setup(){
+    //get user from store
+
+    //setup ref to router
+
+    //Logout function
+    return{};
+  },
 }
 </script>
 

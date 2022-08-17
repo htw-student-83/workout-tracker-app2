@@ -17,7 +17,15 @@ export default {
   components:{
     loged,
     editAExerciseView,
-  }
+  },
+  setup(){
+    //get user from store
+
+    //setup ref to router
+
+    //Logout function
+    return{};
+  },
 }
 </script>
 

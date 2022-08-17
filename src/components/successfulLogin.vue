@@ -1,11 +1,11 @@
 <template>
-  <div class="nav">
+  <div class="nav-loged">
     <div class="logo">
       <img class="imgNavbar" src="../assets/dumbbell.svg" alt="Logo"><p>Active Tracker</p>
     </div>
     <div class="links">
-      <div class="buttonHome">Home</div>
-      <div class="buttonCreate">Create</div>
+      <div class="buttonHome"><router-link to="/exercise">Home</router-link></div>
+      <div class="buttonCreate"><router-link to="/CreateNewExercise">Create</router-link></div>
       <div class="buttonLogout">Logout</div>
     </div>
   </div>
@@ -14,11 +14,19 @@
 <script>
 export default {
   name: "successfulLogin",
+  setup(){
+    //get user from store
+
+    //setup ref to router
+
+    //Logout function
+    return{};
+  },
 }
 </script>
 
 <style scoped>
-.nav{
+.nav-loged{
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -26,7 +34,7 @@ export default {
   background-color: #67ceb7;
 }
 
-.nav .logo{
+.nav-loged .logo{
   color: white;
   font-family: Arial,sans-serif;
   font-weight: bold;
@@ -34,20 +42,31 @@ export default {
   margin-left: 35px;
 }
 
-.nav .links{
+.nav-loged .links{
   display: flex;
   padding-top: 20px;
   color: white;
   font-family: Arial, sans-serif;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .buttonHome{
   margin-right: 40px;
 }
 
+.buttonHome a{
+  color: white;
+  text-decoration: none;
+}
+
 .buttonCreate{
   margin-right: 40px;
+}
+
+.buttonCreate a{
+  color: white;
+  text-decoration: none;
 }
 
 .logo{

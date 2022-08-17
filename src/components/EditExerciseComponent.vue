@@ -1,12 +1,6 @@
 <template>
-  <loged/>
+  <navbar/>
   <div class="editexercise">
-    <div class="manageExercise">
-      <img class="editExercise" src="../assets/pencil.svg" alt="pen">
-    </div>
-    <div class="deleteExercise">
-      <img class="deleteexercise" src="../assets/trash.svg" alt="trash">
-    </div>
     <img class="imgeditExercise" src="../assets/dumbbell.svg" alt="Logo">
     <div class="strength">
       <p>strength</p>
@@ -44,12 +38,20 @@
 </template>
 
 <script>
-import loged from "@/components/successfulLogin"
+import navbar from "@/components/Navbar"
 export default {
   name: "EditExerciseComponent",
   components:{
-    loged,
-  }
+    navbar,
+  },
+  setup(){
+    //get user from store
+
+    //setup ref to router
+
+    //Logout function
+    return{};
+  },
 }
 </script>
 
@@ -69,7 +71,7 @@ export default {
 .imgeditExercise{
   width: 100px;
   height: 200px;
-  margin-top: -68px;
+  margin-top: -38px;
   margin-left: 131px;
 }
 

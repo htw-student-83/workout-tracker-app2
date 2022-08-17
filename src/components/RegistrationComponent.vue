@@ -1,38 +1,54 @@
 <template>
   <navbar/>
-  <div class="loginbox">
+  <div v-if="errorMsg" class="error">
+    <p>{{errorMsg}}</p>
+  </div>
+  <div class="Registrationbox">
     <label class="TextLogin">Register</label><br>
     <div class="inputeMail">
       <label class="senddata">Email</label><br>
-      <input type="email"><br>
+      <input type="email" required id="email" v-model="email"><br>
     </div>
     <div class="inputPasswort">
       <label class="senddata">Password</label><br>
-      <input type="password"><br>
+      <input type="password" required id="password" v-model="password"><br>
     </div>
     <div class="againinputPasswort">
       <label class="senddata">Confirm Password</label><br>
-      <input type="password"><br>
+      <input type="password" required id="passwordagain" v-model="confirmpassword"><br>
     </div>
     <div class="register">Register</div>
-    <p class="haveanaccount">Already have an account?<span> Login</span></p>
+    <p class="haveanaccount">Already have an account?
+      <router-link to="/loginbox">Login</router-link></p>
   </div>
 </template>
 
 <script>
 
 import navbar from "@/components/Navbar";
+import { ref } from 'vue';
 
 export default {
   name: "RegistrationComponent",
   components:{
     navbar,
-  }
-}
+  },
+
+  setup(){
+    //create data/ vars
+    const email = ref(null);
+    const password = ref(null);
+    const confirmpassword = ref(null);
+    const errorMsg = ref(null);
+
+    //Register function
+    return{email, password, confirmpassword, errorMsg};
+  },
+};
 </script>
 
 <style scoped>
-.loginbox{
+.Registrationbox{
   width: 390px;
   height: 320px;
   margin-left: auto;
@@ -101,6 +117,14 @@ input[type="password"]{
   text-align: center;
   margin-top: 20px;
   font-size: 14px;
+}
+
+.haveanaccount a{
+  color: #67ceb7;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
 }
 
 span{

@@ -4,15 +4,28 @@
       <img class="imgNavbar" src="../assets/dumbbell.svg" alt="Logo"><p>Active Tracker</p>
     </div>
     <div class="links">
-      <div class="buttonHome">Home</div>
-      <div class="buttonLogin">Login</div>
+      <div class="buttonHome">
+        <router-link to="/exercise">Home</router-link>
+      </div>
+      <div class="buttonLogin">
+        <router-link to="/loginbox">Login</router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
+  setup(){
+    //get user from store
+
+    //setup ref to router
+
+    //Logout function
+    return{};
+  },
 }
 </script>
 
@@ -36,13 +49,22 @@ export default {
 .nav .links{
   display: flex;
   padding-top: 20px;
-  color: white;
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
 
-.buttonHome{
+.buttonHome a{
   margin-right: 40px;
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.buttonLogin a{
+  margin-right: 40px;
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .logo{

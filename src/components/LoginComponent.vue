@@ -1,5 +1,8 @@
 <template>
   <navbar/>
+  <div v-if="errorMsg" class="error">
+    <p>{{errorMsg}}</p>
+  </div>
   <div class="loginbox">
       <label class="TextLogin">Login</label><br>
       <div class="inputeMail">
@@ -11,18 +14,33 @@
         <input type="password"><br>
       </div>
       <div class="login">Login</div>
-      <p class="haveanaccount">Don't have an account?<span> Register</span></p>
+      <div class="haveanaccount">
+        <p>Don't have an account?</p>
+        <div class="newRegistration">
+          <router-link to="/Registrationbox">Register</router-link>
+        </div>
+      </div>
   </div>
 </template>
 
 <script>
 import navbar from "@/components/Navbar";
+import { ref } from "vue";
 
 export default {
   name: "LoginComponent",
   components:{
     navbar,
-  }
+  },
+  setup(){
+    //create data/ vars
+    const email = ref(null);
+    const password = ref(null);
+    const errorMsg = ref(null);
+
+    //Register function
+    return{email, password, errorMsg};
+  },
 }
 </script>
 
@@ -90,7 +108,22 @@ input[type="password"]{
 .haveanaccount{
   text-align: center;
   margin-top: 10px;
+  margin-left: -50px;
   font-size: 14px;
+}
+
+.newRegistration{
+  margin-top: -17px;
+  margin-left: 185px;
+}
+
+.haveanaccount a{
+  color: #67ceb7;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+
 }
 
 span{
